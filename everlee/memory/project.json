@@ -1,0 +1,13 @@
+{
+  "project_name": "Stuzzly",
+  "status": "in_progress",
+  "ai_collaboration_mode": "full", 
+  "prompt_history": [],
+  "staging_deployments": [],
+  "current_task": null,
+  "percent_complete": 0,
+  "locked_files": [],
+  "allow_auto_deploy": false,
+  "manual_approval_required": true,
+  "wait_for_admin_to_deploy": true
+}

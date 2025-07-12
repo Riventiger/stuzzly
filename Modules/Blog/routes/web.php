@@ -3,6 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use Modules\Blog\Http\Controllers\BlogController;
 
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::resource('blogs', BlogController::class)->names('blog');
+Route::middleware(['web', 'auth', 'verified'])->prefix('blog')->name('blog.')->group(function () {
+    Route::resource('/', BlogController::class)->parameters(['' => 'blog']);
 });

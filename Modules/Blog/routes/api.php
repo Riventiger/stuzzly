@@ -1,8 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Modules\Blog\Http\Controllers\BlogController;
 
-Route::middleware(['auth:sanctum'])->prefix('v1')->group(function () {
-    Route::apiResource('blogs', BlogController::class)->names('blog');
-});
+// Group your API routes under a version prefix if needed
+Route::prefix('v1')
+    ->middleware(['api'])
+    ->group(function () {
+        // Define your API endpoints for the Blog module here
+        Route::get('blogs', fn () => response()->json(['message' => 'List of blogs']));
+        // Example:
+        // Route::get('blogs/{id}', [ApiBlogController::class, 'show']);
+    });

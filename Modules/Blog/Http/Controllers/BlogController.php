@@ -12,7 +12,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('blog::index');
+        return view('Blog::index');
     }
 
     /**
@@ -20,20 +20,24 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('blog::create');
+        return view('Blog::create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request) {}
+    public function store(Request $request)
+    {
+        // Validation logic can go here
+        // Example: $data = $request->validate([...]);
+    }
 
     /**
-     * Show the specified resource.
+     * Display the specified resource.
      */
     public function show($id)
     {
-        return view('blog::show');
+        return view('Blog::show', compact('id'));
     }
 
     /**
@@ -41,16 +45,24 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        return view('blog::edit');
+        return view('Blog::edit', compact('id'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id) {}
+    public function update(Request $request, $id)
+    {
+        // Update logic can go here
+        // Example: $item->update($request->all());
+    }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id) {}
+    public function destroy($id)
+    {
+        // Destroy logic can go here
+        // Example: Model::destroy($id);
+    }
 }
